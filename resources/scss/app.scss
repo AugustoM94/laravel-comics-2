@@ -1,0 +1,217 @@
+@use './partials/variables.scss' as *;
+
+
+$fa-font-path: "../webfonts" !default;
+
+/* @import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+ */
+
+@import '~bootstrap/scss/bootstrap';
+#header{
+
+li {
+  list-style: none;
+  padding: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+a:hover {
+  color: #0282f9;
+}
+
+img {
+  width: 70px;
+}
+
+.bg-header{
+    background-color: #0282f9;
+    height: 40px;
+}
+
+.header-up a{
+    color: white;
+    font-size: 0.6rem;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+input {
+  border: none;
+  border-bottom: 2px solid #0282f9;
+  outline: none;
+  padding-right: 10px;
+   width: 100px ;
+}
+
+ button {
+
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.search-form button i {
+  font-size: 1rem;
+  color: #000;
+}
+.jumbotron{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    object-position: 100% 0;
+}
+}
+.bg-main{
+background-color: #000;
+}
+#main{
+
+h5 {
+        color: white;
+}
+
+button {
+        background-color:  #0282f9;
+        color: white;
+        width:200px;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+    }
+    span{
+        background-color:  #0282f9;
+        color: white;
+        width:200px;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        padding: 15px;
+        margin-left: 20px;
+        position: relative;
+        bottom: 15px;
+    }
+img{
+    width: 170px;
+    height: 200px;
+}
+}
+
+#icon img {
+    width: 80px;
+    height: 60px;
+}
+#icon li {
+    list-style: none;
+}
+#icon span {
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+
+}
+#icon {
+  background-color: #0282f9;
+}
+
+#footer-up{
+
+  background-image: url('/resources/img/footer-bg.jpg');
+  background-size: contain;
+
+h5 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+a{
+    text-decoration: none;
+    color: grey;
+    font-size: 0.7rem;
+}
+li{
+  line-height: 15px;
+
+}
+.big-img {
+    width: 350px;
+    position: absolute;
+}
+.position{
+    position: relative;
+    bottom:50px;
+}
+}
+
+
+#footer-down button {
+    border: 1px solid #0282f9;
+    background-color: transparent;
+    color: white;
+    padding: 8px;
+    text-transform: uppercase;
+
+}
+
+#footer-down li {
+    list-style: none;
+}
+#footer-down a {
+    text-decoration: none;
+}
+#footer-down h5 {
+    color: #0282f9;
+}
+#footer-down .bg-footer-down {
+    background-color: #303030;
+
+}
+#footer-down .position{
+    position: relative;
+    padding-bottom: 10px;
+
+}
+#show img{
+width: 300px;
+}
+.bg-green{
+background-color: #55ba59;
+padding: 15px;
+}
+.txt-white{
+color: rgba(255, 255, 255, 0.4)
+}
+.txt-green{
+color:rgba(200,255,155,0.4)
+}
+.bg-grey{
+background-color: #f6f6f6;
+}
+
+
+#main-down img {
+    width: 80px;
+    height: 60px;
+}
+#main-down li {
+    list-style: none;
+}
+#main-down span {
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+
+}
+#main-down {
+  background-color: grey;
+}
+
