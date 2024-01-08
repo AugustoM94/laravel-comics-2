@@ -12,10 +12,10 @@
 
         <section class="bg-white p-3 container ">
             <div class="row d-flex  align-items-center">
-            <div class="col-2 me-auto">
+<!--             <div class="col-2 me-auto">
                 <img src="{{Vite::asset('resources/img/dc-logo.png')}}" alt="logo-dc">
             </div>
-            <div class="col-8">
+ -->            <div class="col-8">
                 <ul class="d-flex margin-check text-center ">
 
                     <li><a href="#">Characters</a></li>
