@@ -7,13 +7,13 @@
        <section class="container mb-3 ">
         <h1>Comics</h1>
         <div class="row gy-4">
-          @foreach ($comics as $product)
+          @foreach ($comics as $key => $product)
             <div class="col-12 col-md-4 col-lg-3">
              <div class="card h-100">
-                    <a href="{{route('comics.show', $id)}}" class="btn">
-                            <img src="{{$product->thumb}}" alt="{{$product->title}}" class="card-img-top">
+                    <a href="{{route('comic.show', $key)}}" class="btn">
+                            <img src="{{$product['thumb']}}" alt="{{$product['title']}}" class="card-img-top">
                             <div class="card-body">
-                                <h5 class="card-title">{{$product->title}}</h5>
+                                <h5 class="card-title">{{$product['title']}}</h5>
                          </a>
                     </div>
                 </div>
@@ -21,19 +21,7 @@
 
           @endforeach
         </div>
-        <div class="text-center my-5 d-flex justify-content-center">
-            <div class="create_button">
-                <a href="{{route('comics.create')}}">Create a 
-                    comic
-                </a>
-            </div> 
-        </div>
-        <div class="d-flex justify-content-center align-content-center">
-            <div class="load_button">
-                <span class="text-white text-uppercase">load more</span>
-            </div>
-        </div> 
-    </section>
+
     </section>
 <section id="icon" class="bg-header">
     <div class=" container py-5">
@@ -65,7 +53,3 @@
 </main>
 
 @endsection
-
-
-
-

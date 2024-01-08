@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use App\Models\Comic;
 use Illuminate\Database\Seeder;
 
-class ComicsTableSeeder extends Seeder
+class ComicSeeder extends Seeder
 {
     /**
      * Run the database seeds.

@@ -1,21 +1,21 @@
 <?php
 
-namespace App\Http\Controllers\Guest;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use App\Models\Comic;
-
-class ComicsController extends Controller
+use Illuminate\Http\Request;
+use Illuminate\Contracts\Container\BindingResolutionException;
+class ComicController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\View\View
      */
     public function index()
     {
         $comics = Comic::all();
+
         return view('comics.index', compact('comics'));
     }
 
@@ -32,7 +32,6 @@ class ComicsController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -49,13 +48,13 @@ class ComicsController extends Controller
         $newcomic->artists = $formData['artists'];
         $newcomic->writers = $formData['writers'];
         $newcomic->save();
+
         return redirect()->route('comics.show', ['comic' => $newcomic->id]);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function show(Comic $comic)
@@ -66,47 +65,27 @@ class ComicsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function edit(Comic $comic)
     {
-        return view('comics.edit', compact('comic'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Comic $comic)
     {
-        $comic = Comic::find($id);
-        $formData = $request->all();
-        $comic->title = $formData['title'];
-        $comic->description = $formData['description'];
-        $comic->thumb = $formData['thumb'];
-        $comic->price = $formData['price'];
-        $comic->series = $formData['series'];
-        $comic->sale_date = $formData['sale_date'];
-        $comic->type = $formData['type'];
-        $comic->artists = $formData['artists'];
-        $comic->writers = $formData['writers'];
-        $comic->update();
-        return redirect()->route('comics.show', $comic->id);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function destroy(Comic $comic)
     {
-        $comic->delete();
-        return redirect()->route('comics.index');
     }
 }
