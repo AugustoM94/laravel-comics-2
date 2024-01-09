@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Comic;
 use Illuminate\Http\Request;
-use Illuminate\Contracts\Container\BindingResolutionException;
+
 class ComicController extends Controller
 {
     /**
@@ -40,7 +40,7 @@ class ComicController extends Controller
         $newcomic = new Comic();
         $newcomic->title = $formData['title'];
         $newcomic->description = $formData['description'];
-        $newcomic->thumb = $formData['thumb'];
+        $newcomic->image = $formData['image'];
         $newcomic->price = $formData['price'];
         $newcomic->series = $formData['series'];
         $newcomic->sale_date = $formData['sale_date'];

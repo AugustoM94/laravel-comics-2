@@ -15,7 +15,7 @@
                 <p class="mt-4">{!! $comic['description'] !!}</p>
             </div>
             <div class="col-md-6 text-center">
-                <img src="{{$comic->thumb}}" alt="{{$comic->title}}" class="img-fluid">
+                <img src="{{$comic->image}}" alt="{{$comic->title}}" class="img-fluid">
             </div>
         </div>
     </section>

@@ -42,6 +42,15 @@
             </select>
             {{-- <input required type="text" name="type" id="type"  placeholder="Inserisci il tipo" class="w-25 p-1"> --}}
         </div>
+        <div class="d-flex flex-column align-items-center mb-2">
+            <label for="artists">Artista</label>
+            <input type="text" name="artists" id="artists"  placeholder="Inserisci gli artisti" class="w-25 p-1">
+        </div>
+
+        <div class="d-flex flex-column align-items-center mb-4">
+            <label for="writers">Scrittore</label>
+            <input type="text" name="writers" id="writers" placeholder="Inserisci gli scrittori" class="w-25 p-1">
+        </div>
         <div>
             <input type="submit" value="Invia" class="btn btn-secondary">
         </div>
