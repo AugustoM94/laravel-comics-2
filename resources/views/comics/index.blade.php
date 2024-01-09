@@ -5,12 +5,15 @@
 @section('content')
 <main>
        <section class="container mb-3 ">
+        @if (session()->has('message'))
+          <div class="alert alert-success">{{ session()->get('message')}}</div>
+          @endif
         <h1>Comics</h1>
         <div class="row gy-4">
           @foreach ($comics as $key => $comic)
             <div class="col-12 col-md-4 col-lg-3">
              <div class="card h-100">
-                    <a href="{{route('comics.show', $key)}}" class="btn">
+                    <a href="{{route('comics.show', $comic->id)}}" class="btn">
                             <img src="{{$comic->image}}" alt="{{$comic->title}}" class="card-img-top">
                             <div class="card-body">
                                 <h5 class="card-title">{{$comic->title}}</h5>
@@ -18,9 +21,9 @@
                     </div>
                 </div>
             </div>
-
           @endforeach
         </div>
+        
         <div class="text-center my-5 d-flex justify-content-center">
             <div class="create_button btn btn-primary">
                 <a class="text-white" href="{{route('comics.create')}}">Create a 

@@ -6,32 +6,41 @@
      
         <div class="d-flex flex-column align-items-center mb-2">
             <label for="title">Titolo</label>
-            <input required type="text" name="title" id="title" placeholder="Inserisci un titolo" class="w-25 p-1">
+            <input required type="text" name="title" id="title"  placeholder="Inserisci un titolo" class="w-50 p-1  @error('title') is-invalid @enderror">
+            @error('title')
+                            <div class="invalid-feedback">{{ $message }}</div>
+             @enderror
         </div>
 
         <div class="d-flex flex-column align-items-center mb-2">
             <label for="description">Descrizione</label>
-            <input type="text" name="description" id="description" placeholder="Inserisci una descrizione" class="w-25 p-1">
+            <textarea name="description" id="description" cols="30" rows="10" class="form-control" placeholder="Inserisci descrizione..."></textarea>
         </div>
 
         <div class="d-flex flex-column align-items-center mb-2">
             <label for="image">Image</label>
-            <input  type="text" name="image" id="image" placeholder="Inserisci un'immagine" class="w-25 p-1">
+            <input  type="url" name="image" id="image" placeholder="Inserisci un'immagine" class="w-50 p-1 ">
         </div>
 
         <div class="d-flex flex-column align-items-center mb-2">
             <label for="price">Prezzo</label>
-            <input  type="text" name="price" id="price" placeholder="Inserisci un prezzo" class="w-25 p-1">
+            <input required type="num" name="price" id="price" placeholder="Inserisci un prezzo" class="w-50 p-1  @error('price') is-invalid @enderror">
+            @error('price')
+                            <div class="invalid-feedback">{{ $message }}</div>
+             @enderror
         </div>
 
         <div class="d-flex flex-column align-items-center mb-2">
             <label for="series">Serie</label>
-            <input  type="text" name="series" id="series"  placeholder="Inserisci la serie" class="w-25 p-1">
+            <input required  type="text" name="series" id="series"  placeholder="Inserisci la serie" class="w-50 p-1  @error('series') is-invalid @enderror">
+            @error('series')
+                            <div class="invalid-feedback">{{ $message }}</div>
+             @enderror
         </div>
 
         <div class="d-flex flex-column align-items-center mb-2">
             <label for="sale_date">Data di uscita</label>
-            <input type="text" name="sale_date" id="sale_date" placeholder="Data di uscita" class="w-25 p-1">
+            <input required type="text" name="sale_date" id="sale_date" placeholder="Data di uscita" class="w-50 p-1">
         </div>
 
         <div class="d-flex flex-column align-items-center mb-2">
@@ -40,7 +49,7 @@
                 <option value="comic book" selected>comic book</option>
                 <option value="graphic novel">graphic novel</option>
             </select>
-            {{-- <input required type="text" name="type" id="type"  placeholder="Inserisci il tipo" class="w-25 p-1"> --}}
+            {{-- <input required type="text" name="type" id="type"  placeholder="Inserisci il tipo" class="w-50 p-1"> --}}
         </div>
 
         <div>

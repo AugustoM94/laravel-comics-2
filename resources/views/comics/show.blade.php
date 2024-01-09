@@ -18,6 +18,17 @@
                 <img src="{{$comic->image}}" alt="{{$comic->title}}" class="img-fluid">
             </div>
         </div>
+        <div class="create_button btn btn-primary">
+                <a class="text-white" href="{{route('comics.edit', $comic->id)}}">Modifica 
+                    comic
+                </a>
+            </div> 
+            <form action="{{route('comics.destroy', $comic->id)}}" method="POST">
+                @csrf
+                @method('DELETE') 
+                <button class="create_button btn btn-danger mt-1 ">Cancella comic </button>
+            </form>
+
     </section>
 </main>
 <section class="bg-grey">
