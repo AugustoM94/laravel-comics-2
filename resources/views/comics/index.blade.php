@@ -22,8 +22,8 @@
           @endforeach
         </div>
         <div class="text-center my-5 d-flex justify-content-center">
-            <div class="create_button">
-                <a href="{{route('comics.create')}}">Create a 
+            <div class="create_button btn btn-primary">
+                <a class="text-white" href="{{route('comics.create')}}">Create a 
                     comic
                 </a>
             </div> 
