@@ -7,13 +7,13 @@
        <section class="container mb-3 ">
         <h1>Comics</h1>
         <div class="row gy-4">
-          @foreach ($comics as $key => $product)
+          @foreach ($comics as $key => $comic)
             <div class="col-12 col-md-4 col-lg-3">
              <div class="card h-100">
                     <a href="{{route('comics.show', $key)}}" class="btn">
-                            <img src="{{$product->image}}" alt="{{$product->title}}" class="card-img-top">
+                            <img src="{{$comic->image}}" alt="{{$comic->title}}" class="card-img-top">
                             <div class="card-body">
-                                <h5 class="card-title">{{$product->title}}</h5>
+                                <h5 class="card-title">{{$comic->title}}</h5>
                          </a>
                     </div>
                 </div>
