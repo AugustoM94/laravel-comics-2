@@ -21,7 +21,13 @@
 
           @endforeach
         </div>
-
+        <div class="text-center my-5 d-flex justify-content-center">
+            <div class="create_button">
+                <a href="{{route('comics.create')}}">Create a 
+                    comic
+                </a>
+            </div> 
+        </div>
     </section>
 <section id="icon" class="bg-header">
     <div class=" container py-5">
