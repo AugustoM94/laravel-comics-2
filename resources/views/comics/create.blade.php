@@ -19,23 +19,22 @@
 
         <div class="d-flex flex-column align-items-center mb-2">
             <label for="image">Image</label>
-            <input  type="url" name="image" id="image" placeholder="Inserisci un'immagine" class="w-50 p-1 ">
+            <input  type="url" name="image" id="image" placeholder="Inserisci un'immagine" class="w-50 p-1 @error('image') is-invalid @enderror">
+            @error('url')
+                            <div class="invalid-feedback">{{ $message }}</div>
+             @enderror
         </div>
 
         <div class="d-flex flex-column align-items-center mb-2">
             <label for="price">Prezzo</label>
-            <input required type="num" name="price" id="price" placeholder="Inserisci un prezzo" class="w-50 p-1  @error('price') is-invalid @enderror">
-            @error('price')
-                            <div class="invalid-feedback">{{ $message }}</div>
-             @enderror
+            <input required type="num" name="price" id="price" placeholder="Inserisci un prezzo" class="w-50 p-1 ">
+
         </div>
 
         <div class="d-flex flex-column align-items-center mb-2">
             <label for="series">Serie</label>
-            <input required  type="text" name="series" id="series"  placeholder="Inserisci la serie" class="w-50 p-1  @error('series') is-invalid @enderror">
-            @error('series')
-                            <div class="invalid-feedback">{{ $message }}</div>
-             @enderror
+            <input required  type="text" name="series" id="series"  placeholder="Inserisci la serie" class="w-50 p-1">
+
         </div>
 
         <div class="d-flex flex-column align-items-center mb-2">

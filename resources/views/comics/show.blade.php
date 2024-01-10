@@ -26,10 +26,10 @@
             <form action="{{route('comics.destroy', $comic->id)}}" method="POST">
                 @csrf
                 @method('DELETE') 
-                <button class="create_button btn btn-danger mt-1 ">Cancella comic </button>
+                <button class="btn btn-danger mt-1 cancel-button" data-item-title="{{$comic->title}}">Cancella comic </button>
             </form>
-
     </section>
+  @include('partials.modal_delete');
 </main>
 <section class="bg-grey">
 <div class="container p-3 ">

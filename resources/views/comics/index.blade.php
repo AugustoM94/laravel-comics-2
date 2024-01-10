@@ -6,8 +6,18 @@
 <main>
        <section class="container mb-3 ">
         @if (session()->has('message'))
-          <div class="alert alert-success">{{ session()->get('message')}}</div>
+          <div class="alert alert-success mt-1 ">{{ session()->get('message')}}</div>
           @endif
+             <div class="mt-2">
+                 <form action="{{route('comics.index')}}" method="GET">
+                    <select name="search" id="search">
+                        <option value="">All</option>
+                        <option value="comic book">comic book</option>
+                        <option value="graphic novel">graphic novel</option>
+                    </select>
+                     <button type="submit" class="btn btn-danger ms-3">Cerca</button>
+                </form>
+            </div>
         <h1>Comics</h1>
         <div class="row gy-4">
           @foreach ($comics as $key => $comic)
