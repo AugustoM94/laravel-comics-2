@@ -24,22 +24,25 @@ class StoreComicRequests extends FormRequest
     public function rules()
     {
         return [
-
             'title' => 'required|min:5|max:255',
             'image' => 'url',
             'price' => 'max:50',
             'sale_date' => 'max:30',
             'series' => 'max:30',
             'type' => 'max:20',
-        
         ];
     }
 
-    public function messages(){
+    public function messages()
+    {
         return [
              'title.required' => 'Il campo titolo è obbligatorio',
              'title.min' => 'Il campo deve avere almeno :min caratteri',
-             'title.max' => 'Il campo deve avere almeno :max caratteri'
-        ];
+             'title.max' => 'Il campo deve avere almeno :max caratteri',
+             'price' => 'Il campo deve avere massimo :max caratteri',
+             'sale_date' => 'Il campo deve avere massimo :max caratteri',
+             'series' => 'Il campo deve avere massimo :max caratteri',
+             'type' => 'Il campo deve avere massimo :max caratteri',
+];
     }
 }
